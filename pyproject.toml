@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oh-my-theme"
+dynamic = ["version"]
+description = "Terminal-based theme manager for Oh My Posh with preview, search, custom repositories, and theme customization"
+readme = "README.md"
+requires-python = ">=3.6"
+license = "MIT"
+authors = [
+    { name = "AccidentallyStable", email = "accidentallystable@proton.com" },
+]
+maintainers = [
+    { name = "AccidentallyStable", email = "accidentallystable@proton.com" },
+]
+keywords = [
+    "oh-my-posh",
+    "terminal",
+    "theme",
+    "prompt",
+    "shell",
+    "bash",
+    "zsh",
+    "fish",
+    "customization",
+    "search",
+    "git",
+    "color-editor",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console :: Curses",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Shells",
+    "Topic :: Terminals",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "windows-curses; sys_platform == 'win32'",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov",
+    "black",
+    "flake8",
+    "mypy",
+]
+
+[project.urls]
+Homepage = "https://github.com/mikeisfree/oh-my-theme"
+Repository = "https://github.com/mikeisfree/oh-my-theme"
+Issues = "https://github.com/mikeisfree/oh-my-theme/issues"
+Documentation = "https://github.com/mikeisfree/oh-my-theme#readme"
+
+[project.scripts]
+omt = "oh_my_theme.main:main"
+
+[tool.setuptools]
+packages = ["oh_my_theme"]
+
+[tool.setuptools.dynamic]
+version = { attr = "oh_my_theme.__version__" }

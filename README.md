@@ -43,7 +43,10 @@ paru -S oh-my-theme
 ### Method 3: Git Clone
 ```bash
 git clone https://github.com/mikeisfree/oh-my-theme.git
+cd oh-my-theme
 pip install -e .
+# or, using uv:
+uv pip install -e .
 ```
 
 ## Usage After Installation
@@ -241,8 +244,8 @@ Oh My Theme v2.0 features a modular architecture:
 ## Dependencies
 
 - **Python 3.6+**: Core runtime requirement
-- **Standard libraries only**: curses, json, os, subprocess, urllib
-- **No external dependencies required**: Pure Python implementation
+- **Standard libraries only** on Linux/macOS: curses, json, os, subprocess, urllib
+- **Windows**: also installs `windows-curses` automatically (curses isn't built into Python on Windows)
 
 ## Related Links
 
