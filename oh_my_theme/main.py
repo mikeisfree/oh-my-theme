@@ -1068,7 +1068,7 @@ def main():
     print("\n" + "#" * box_width)
     print("#" + " " * (box_width - 2) + "#")
     print("#" + " Like oh-my-theme?".center(box_width - 2) + "#")
-    print("#" + " Give it a 🌟 https://github.com/mikeisfree/oh-my-posh-Theme-Installer".center(box_width - 2) + "#")
+    print("#" + " Give it a 🌟 https://github.com/mikeisfree/oh-my-theme".center(box_width - 2) + "#")
     print("#" + " " * (box_width - 2) + "#")
     print("%" * box_width)
     print("%" + " " * (box_width - 2) + "%")
